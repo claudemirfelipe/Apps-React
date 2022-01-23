@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Home from './Navegacao/Home';
+import CalculadoraIMC from './CalculadoraIMC/CalculadoraIMC';
+import CalculadoraMatematica from './CalculadoraMatematica/CalculadoraMatematica';
+import ConversorMoeda from './Conversor_Moeda/ConversorMoeda';
+import JogodaVelha from './JogodaVelha/JogodaVelha';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/CalculadoraIMC" element={<CalculadoraIMC/>} />
+        <Route path="/CalculadoraMatematica" element={<CalculadoraMatematica/>} />
+        <Route path="/ConversorMoeda" element={<ConversorMoeda/>} />
+        <Route path="/JogodaVelha" element={<JogodaVelha/>} />
+      </Routes>
     </div>
   );
 }
 
-export default App;
